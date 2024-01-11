@@ -8,8 +8,8 @@ llama-build:
 
 pull-models:
 	mkdir -p models/llava
-	wget -P models/llava https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
-	wget -P models/llava https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
+	wget -O models/llava/ggml-model-q4_k.gguf models/llava https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
+	wget -O models/llava/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
 
 run-server:
 	./llama.cpp/server \
