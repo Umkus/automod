@@ -1,0 +1,5 @@
+Analyze the image and create a JSON object with the following fields:
+safe(boolean), description(string), people(array)
+safe: is the image appropriate for all audiences?
+description: image description
+people[]: short person reference and age in years
