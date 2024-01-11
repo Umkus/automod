@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"/..
 
-git clone https://github.com/Umkus/automod.git
+git clone https://github.com/ggerganov/llama.cpp.git
 
 cd llama.cpp
 make llava-cli server
