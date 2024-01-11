@@ -1,4 +1,3 @@
 models
 *.log
-llama.cpp
 .DS_Store
