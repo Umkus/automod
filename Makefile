@@ -1,20 +1,18 @@
-build: llama-update llama-build pull-models
-
-llama-update:
+update:
 	git submodule update --remote
 
-llama-build:
+build:
 	$(MAKE) -C ./llama.cpp/ llava-cli server
 
-pull-models:
+models:
 	mkdir -p models/llava
 	wget -O models/llava/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
 	wget -O models/llava/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
 
-run-server:
+server:
 	./llama.cpp/server \
-		--threads 4 \
-		--threads-batch 4 \
+		--threads 16 \
+		--threads-batch 16 \
 		--ctx-size 512 \
 		--batch-size 512 \
 		--n-gpu-layers 0 \
@@ -22,7 +20,7 @@ run-server:
 		--model models/llava/ggml-model-q4_k.gguf \
 		--mmproj models/llava/mmproj-model-f16.gguf \
 
-run-cli:
+cli:
 	./llama.cpp/llava-cli \
 		--threads 8 \
 		--threads-batch 8 \
