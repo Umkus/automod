@@ -1,5 +1,42 @@
 Analyze the image and create a JSON object with the following fields:
-graphic: can the image be considered graphic?
-suggestive: can the image be considered suggestive?
-inappropriate: can the image be considered inappropriate?
-people[]: person and age in years
+suggestive: can the image content be described as sexually suggestive?
+suggestive_reason: very short reasoning
+repulsive: can the image content be considered repulsive/derogatory/shocking to most people?
+repulsive_reason: very short reasoning
+explicit: is the image depicting explicitly graphic content?
+explicit_reason: very short reasoning
+
+
+
+
+Which ones of the following categories describe image contents: sexually suggestive, sexually explicit, repulsive, derogatory, shocking, graphic, cruelty.
+Answer with a list of categories.
+
+
+
+
+Categorize the type of content in the image according to this list: sexually suggestive, sexually explicit, repulsive, derogatory, shocking, graphic, cruelty.
+Answer with a list of categories.
+
+
+
+
+
+
+Return a JSON with a list of content categories from this list: hateful, derogatory, shocking, graphic, violence, sexually suggestive, repulsive, sexually explicit.
+
+Categorise the image (with hight confidence) according to this list: hateful, derogatory, shocking, graphic, violence, sexually suggestive, repulsive, sexually explicit.
+
+This almost works: Analyze wether the  image can be generally categorized as: hateful, graphic, violence, sexually suggestive, sexually explicit, repuslive?
+
+
+General:
+Analyze wether the  image can be generally categorized as: graphic, violence, sexually suggestive, sexually explicit, repuslive?
+Return a JSON object with the following fields:
+categories: matches categories
+people: array of objects with person, age(number) for all people if present
+description: brief image description
+
+Unauth:
+Analyze if the image contains nonconsensual photos or images that was likely obtained illegaly.
+A couple of examples of illegal content (among many others): likely unconsensual shot from low angle, secretly taking photos of private parts, usage of hidden camera, PII, etc.
