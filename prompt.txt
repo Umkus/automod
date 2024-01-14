@@ -31,9 +31,8 @@ This almost works: Analyze wether the  image can be generally categorized as: ha
 
 
 General:
-Analyze wether the  image can be generally categorized as: graphic, violence, sexually suggestive, sexually explicit, repuslive?
 Return a JSON object with the following fields:
-categories: matching categories
+categories: choose applicable [graphic, violence, sexually suggestive, sexually explicit, repuslive]
 people: array of objects with person, age(number) for all detected people
 description: brief image description
 
