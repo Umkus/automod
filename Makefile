@@ -1,8 +1,20 @@
 update:
+	git submodule init
 	git submodule update --remote
 
 build:
 	$(MAKE) -C ./llama.cpp/ llava-cli server
+
+
+model-llava-7b:
+	mkdir -p models/llava/13b
+	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
+	wget -O models/llava/7b/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
+
+model-llava-13b:
+	mkdir -p models/llava/13b
+	wget -O models/llava/13b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/ggml-model-q4_k.gguf
+	wget -O models/llava/13b/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/mmproj-model-f16.gguf
 
 models:
 	mkdir -p models/llava
