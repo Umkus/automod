@@ -7,7 +7,7 @@ build:
 
 
 model-llava-7b:
-	mkdir -p models/llava/13b
+	mkdir -p models/llava/7b
 	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
 	wget -O models/llava/7b/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
 
@@ -29,8 +29,8 @@ server:
 		--batch-size 512 \
 		--n-gpu-layers 0 \
 		--host 0.0.0.0 \
-		--model models/llava/ggml-model-q4_k.gguf \
-		--mmproj models/llava/mmproj-model-f16.gguf \
+		--model models/llava/7b/ggml-model-q4_k.gguf \
+		--mmproj models/llava/7b/mmproj-model-f16.gguf \
 
 cli:
 	./llama.cpp/llava-cli \
@@ -44,7 +44,7 @@ cli:
 		--n-gpu-layers 0 \
 		--n-gpu-layers-draft 0 \
 		--file prompt.txt \
-		--model models/llava/ggml-model-q4_k.gguf \
-		--mmproj models/llava/mmproj-model-f16.gguf \
+		--model models/llava/7b/ggml-model-q4_k.gguf \
+		--mmproj models/llava/7b/mmproj-model-f16.gguf \
 		--image images/m-2.jpeg \
 		--temp 0.1
