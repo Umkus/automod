@@ -16,18 +16,12 @@ model-llava-13b:
 	wget -O models/llava/13b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/ggml-model-q4_k.gguf
 	wget -O models/llava/13b/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/mmproj-model-f16.gguf
 
-models:
-	mkdir -p models/llava
-	wget -O models/llava/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
-	wget -O models/llava/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
-
 server:
 	./llama.cpp/server \
 		--threads 16 \
 		--threads-batch 16 \
 		--ctx-size 512 \
 		--batch-size 512 \
-		--n-gpu-layers 0 \
 		--host 0.0.0.0 \
 		--model models/llava/7b/ggml-model-q4_k.gguf \
 		--mmproj models/llava/7b/mmproj-model-f16.gguf \
@@ -41,8 +35,6 @@ cli:
 		--top-k 40 \
 		--top-p 0.9 \
 		--min-p 0.1 \
-		--n-gpu-layers 0 \
-		--n-gpu-layers-draft 0 \
 		--file prompt.txt \
 		--model models/llava/7b/ggml-model-q4_k.gguf \
 		--mmproj models/llava/7b/mmproj-model-f16.gguf \
