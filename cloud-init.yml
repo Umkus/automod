@@ -1,0 +1,18 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+manage-resolv-conf: true
+resolv_conf:
+  nameservers:
+    - '8.8.8.8'
+    - '1.1.1.1'
+packages:
+  - build-essentail
+
+runcmd:
+  - git clone https://github.com/Umkus/automod.git
+  - cd automod
+  - make update build model-llava-7b
+  - nohup make server &
+
+final_message: The system is finally up, after $UPTIME seconds

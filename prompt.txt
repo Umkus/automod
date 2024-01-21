@@ -1,4 +1,12 @@
-Return a JSON object with the following fields:
-categories: choose applicable [graphic, violence, sexually suggestive, sexually explicit, repuslive]
-people: array of objects with person, age(number) for all detected people
-description: brief image description
+Convert the image to JSON, following the instructions:
+Analyze the image to understand what type of photo this is (amateur, spy cam, professional, screenshot, mosaic, upskirt) and put it into photoType property.
+
+For each identified person create an object with the following properties and put it into a persons property:
+age: Age of the person in years
+person: Short reference
+clothing: clothed, minimal, implicit nudity, explicit nudity
+sexuality: none, suggestive, erotic, sexual act
+physique: normal, discomfort, unwell, wounded, senseless, dead
+emotion: neutral, happy, sad, angry, afraid, disgusted, hateful
+celebrity: true/false
+action: neutral, hurting others, forcing, struggling
