@@ -1,12 +1,20 @@
-Convert the image to JSON, following the instructions:
-Analyze the image to understand what type of photo this is (amateur, spy cam, professional, screenshot, mosaic, upskirt) and put it into photoType property.
+Convert the image to JSON according to instructions:
+Generate values according to Result type definition.
+Follow the type definitions very precisely.
+Choose values only from the proposed variants.
 
-For each identified person create an object with the following properties and put it into a persons property:
-age: Age of the person in years
-person: Short reference
-clothing: clothed, minimal, implicit nudity, explicit nudity
-sexuality: none, suggestive, erotic, sexual act
-physique: normal, discomfort, unwell, wounded, senseless, dead
-emotion: neutral, happy, sad, angry, afraid, disgusted, hateful
-celebrity: true/false
-action: neutral, hurting others, forcing, struggling
+type PhotoType = "amateur" | "spy cam" | "professional" | "screenshot" | "mosaic" | "upskirt"
+type Person = {
+    age: Number
+    reference: String
+    clothing: null | "proper" | "minimal" | "implicit nudity" | "explicit nudity"
+    sexuality: null | "suggestive" | "erotic" | "sexual act"
+    condition: null | "discomfort" | "unwell" | "wounded" | "senseless" | "likely dead"
+    emotions: null | "happy" | "sad" | "angry" | "afraid" | "disgusted" | "hateful" | "distressed"
+    actions: null | "malicious" | "life" | "threatening" | "struggling"
+}
+type Result = {
+    personsNum: Number
+    photoType: PhotoType
+    persons: Person[]
+}
