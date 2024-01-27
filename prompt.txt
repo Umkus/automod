@@ -1,20 +1,5 @@
-Convert the image to JSON according to instructions:
-Generate values according to Result type definition.
-Follow the type definitions very precisely.
-Choose values only from the proposed variants.
-
-type PhotoType = "amateur" | "spy cam" | "professional" | "screenshot" | "mosaic" | "upskirt"
-type Person = {
-    age: Number
-    reference: String
-    clothing: null | "proper" | "minimal" | "implicit nudity" | "explicit nudity"
-    sexuality: null | "suggestive" | "erotic" | "sexual act"
-    condition: null | "discomfort" | "unwell" | "wounded" | "senseless" | "likely dead"
-    emotions: null | "happy" | "sad" | "angry" | "afraid" | "disgusted" | "hateful" | "distressed"
-    actions: null | "malicious" | "life" | "threatening" | "struggling"
-}
-type Result = {
-    personsNum: Number
-    photoType: PhotoType
-    persons: Person[]
-}
+Convert to YAML using this format:
+n4y: Does the image depict any exposed genitals, anus or bare female chest? Answer yes or no. Provide reasoning.
+p2n: Does the image depict sexual act? Explain in 10 words. Provide reasoning.
+o11e: Could the image be sexualized or objectified without context? Provide reasoning.
+y3s: Array of numbers, representing age for each person in the photo.
