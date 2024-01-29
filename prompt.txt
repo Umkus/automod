@@ -1,5 +1,5 @@
 Generate YAML using this format:
-n4y: Does the image depict any exposed genitals, anus or bare female chest? Explain in up to 10 words.
+n4y: Does the image depict any of: genitals, anus or female nipple? Explain in up to 10 words.
 p2n: Does the image depict sexual act? Explain in up to 10 words.
 o11e: Could the image contents be interpreted in a sexual way, if one is looking for potentially suggestive content? Explain in up to 10 words.
 a2s: Array of numbers, representing ages of all people in the image.
