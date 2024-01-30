@@ -28,8 +28,8 @@ server:
 
 cli:
 	./llama.cpp/llava-cli \
-		--threads 8 \
-		--threads-batch 8 \
+		--threads 16 \
+		--threads-batch 16 \
 		--ctx-size 512 \
 		--batch-size 512 \
 		--top-k 40 \
