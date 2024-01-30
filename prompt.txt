@@ -2,7 +2,7 @@ Answer all of the questions.
 Each answer must consist of a single word!
 Return an ordered list of answers.
 
-1. Having analyzed all persons' ages what is the youngest age number?
+1. Using only numbers, how old is the youngest person in the image?
 2. Could the image contents be interpreted in a sexual way, if one is looking for potentially suggestive content?
 3. Does the image depict genitals, anus or female nipple?
 4. Does the image actually display sexual act?
