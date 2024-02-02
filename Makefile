@@ -12,6 +12,11 @@ model-llava-7b:
 	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
 	wget -O models/llava/7b/mmproj-model-f16.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/mmproj-model-f16.gguf
 
+model-llava-7b-1.6:
+	mkdir -p models/llava/7b
+	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/cjpais/llava-1.6-mistral-7b-gguf/resolve/main/llava-v1.6-mistral-7b.Q4_K_M.gguf
+	wget -O models/llava/7b/mmproj-model-f16.gguf https://huggingface.co/cjpais/llava-1.6-mistral-7b-gguf/resolve/main/mmproj-model-f16.gguf
+
 model-llava-13b:
 	mkdir -p models/llava/13b
 	wget -O models/llava/13b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/ggml-model-q4_k.gguf
