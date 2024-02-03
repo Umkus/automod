@@ -1,8 +1,11 @@
-Answer all of the questions.
-Each answer must consist of a single word!
-Return an ordered list of answers.
+Answer all of the questions!
+Only use available context!
+You must provide answers!
+All answers must be made with a single word!
+Approximate and average if required, don't make excuses!
+Result should be a comma separated list!
 
-1. Using only numbers, how old is the youngest person in the image?
-2. Could the image contents be interpreted in a sexual way, if one is looking for potentially suggestive content?
-3. Does the image depict genitals, anus or female nipple?
-4. Does the image actually display sexual act?
+How old is the youngest person in the image?
+Could the image contents be interpreted in a sexual way, if one is looking for potentially suggestive content?
+Does the image depict genitals, anus or female nipple?
+Does the image display sexual act?
