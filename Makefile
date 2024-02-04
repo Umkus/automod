@@ -17,6 +17,11 @@ model-llava-7b-1.6:
 	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/cjpais/llava-1.6-mistral-7b-gguf/resolve/main/llava-v1.6-mistral-7b.Q4_K_M.gguf
 	wget -O models/llava/7b/mmproj-model-f16.gguf https://huggingface.co/cjpais/llava-1.6-mistral-7b-gguf/resolve/main/mmproj-model-f16.gguf
 
+model-llava-34b:
+	mkdir -p models/llava/34b
+	wget -O models/llava/34b/ggml-model-q4_k.gguf https://huggingface.co/cjpais/llava-v1.6-34B-gguf/resolve/main/llava-1.6-34b.Q3_K.gguf
+	wget -O models/llava/34b/mmproj-model-f16.gguf https://huggingface.co/cjpais/llava-v1.6-34B-gguf/resolve/main/mmproj-model-f16.gguf
+
 model-llava-13b:
 	mkdir -p models/llava/13b
 	wget -O models/llava/13b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-13b/resolve/main/ggml-model-q4_k.gguf
