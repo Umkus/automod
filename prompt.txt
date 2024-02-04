@@ -1,7 +1,7 @@
 Answer all of the questions!
 Only use available context!
 You must provide answers!
-All answers must be made with a single word!
+All answers must be made with up to 3 characters!
 Approximate and average if required, don't make excuses!
 Result should be a comma separated list!
 
