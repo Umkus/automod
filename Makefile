@@ -38,11 +38,11 @@ cli:
 		--threads-batch 16 \
 		--ctx-size 512 \
 		--batch-size 512 \
-		--top-k 40 \
+		--top-k 80 \
 		--top-p 0.7 \
-		--min-p 0.1 \
+		--min-p 0.2 \
+		--temp 0.5 \
 		--file prompt.txt \
 		--model models/llava/7b/ggml-model-q4_k.gguf \
 		--mmproj models/llava/7b/mmproj-model-f16.gguf \
-		--image images/m-2.jpeg \
-		--temp 0.2
+		--image images/m-2.jpeg
