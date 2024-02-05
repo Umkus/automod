@@ -3,7 +3,6 @@ Only use available context!
 You must provide four answers!
 All answers must be made with up to 3 characters!
 Approximate and average if required, don't make excuses!
-Result should be a comma separated list!
 
 Questions:
 1. How old is the youngest person in the image?
