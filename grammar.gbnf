@@ -1,0 +1,8 @@
+space ::= " "?
+string ::=  "\"" (
+        [^"\\] |
+        "\\" (["\\/bfnrt] | "u" [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F])
+      )* "\"" space
+boolean ::= ("true" | "false") space
+integer ::= ("-"? ([0-9] | [1-9] [0-9]*)) space
+root ::= "{" space "\"youngest-age\"" space ":" space integer "," space "\"perceived-as-revealing-provocative\"" space ":" space boolean "," space "\"level-of-nudity-present\"" space ":" space boolean"," space "\"sexual-act\"" space ":" space boolean "}" space
