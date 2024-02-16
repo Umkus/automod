@@ -7,6 +7,11 @@ build:
 	$(MAKE) -C ./llama.cpp/ llava-cli server
 
 
+model-obsidian-3b:
+	mkdir -p models/obsidian/3b
+	wget -O models/obsidian/3b/ggml-model-q4_k.gguf https://huggingface.co/NousResearch/Obsidian-3B-V0.5-GGUF/resolve/main/obsidian-q6.gguf
+	wget -O models/obsidian/3b/mmproj-model-f16.gguf https://huggingface.co/NousResearch/Obsidian-3B-V0.5-GGUF/resolve/main/mmproj-obsidian-f16.gguf
+
 model-llava-7b:
 	mkdir -p models/llava/7b
 	wget -O models/llava/7b/ggml-model-q4_k.gguf https://huggingface.co/mys/ggml_llava-v1.5-7b/resolve/main/ggml-model-q4_k.gguf 
