@@ -44,8 +44,8 @@ server:
 		--ctx-size 512 \
 		--batch-size 512 \
 		--host 0.0.0.0 \
-		--model models/llava/13b-1.6/ggml-model-q4_k.gguf \
-		--mmproj models/llava/13b-1.6/mmproj-model-f16.gguf \
+		--model models/llava/7b-1.6/ggml-model-q4_k.gguf \
+		--mmproj models/llava/7b-1.6/mmproj-model-f16.gguf \
 
 cli:
 	./llama.cpp/llava-cli \
