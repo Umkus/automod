@@ -37,6 +37,11 @@ model-llava-13b-1.6:
 	wget -O models/llava/13b-1.6/ggml-model-q4_k.gguf https://huggingface.co/cmp-nct/llava-1.6-gguf/resolve/main/vicuna-13b-q6_k.gguf
 	wget -O models/llava/13b-1.6/mmproj-model-f16.gguf https://huggingface.co/cmp-nct/llava-1.6-gguf/resolve/main/vicuna-13b-mmproj-model-f16-q6_k.gguf
 
+model-moondream:
+	mkdir -p models/moondream2
+	wget -O models/moondream2/moondream2-text-model-f16.gguf https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream2-text-model-f16.gguf
+	wget -O models/moondream2/moondream2-mmproj-f16.gguf https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream2-mmproj-f16.gguf
+
 server:
 	./llama.cpp/server \
 		--threads 16 \
@@ -58,6 +63,8 @@ cli:
 		--min-p 0.05 \
 		--temp 0.1 \
 		--file prompt.txt \
-		--model models/llava/7b/ggml-model-q4_k.gguf \
-		--mmproj models/llava/7b/mmproj-model-f16.gguf \
+		-ngl 0 \
+		--model models/moondream2/moondream2-text-model-f16.gguf \
+		--mmproj models/moondream2/moondream2-mmproj-f16.gguf \
+		--grammar-file ./grammar.gbnf \
 		--image images/m-2.jpeg
