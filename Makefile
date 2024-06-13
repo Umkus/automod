@@ -4,8 +4,7 @@ update:
 	git submodule update --remote
 
 build:
-	$(MAKE) -C ./llama.cpp/ llava-cli server
-
+	$(MAKE) -C ./llama.cpp/ llama-llava-cli llama-llava-server
 
 model-obsidian-3b:
 	mkdir -p models/obsidian/3b
@@ -42,18 +41,25 @@ model-moondream:
 	wget -O models/moondream2/moondream2-text-model-f16.gguf https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream2-text-model-f16.gguf
 	wget -O models/moondream2/moondream2-mmproj-f16.gguf https://huggingface.co/vikhyatk/moondream2/resolve/main/moondream2-mmproj-f16.gguf
 
+model-bunny:
+	mkdir -p models/bunny
+	wget -O models/bunny/bunny-text-model-f16.gguf https://huggingface.co/BAAI/Bunny-v1_0-4B-gguf/resolve/main/ggml-model-Q4_K_M.gguf
+	wget -O models/bunny/bunny-mmproj-f16.gguf https://huggingface.co/BAAI/Bunny-v1_0-4B-gguf/resolve/main/mmproj-model-f16.gguf
+
+# docker run -p 8080:8080 -v `pwd`/models:/models ghcr.io/ggerganov/llama.cpp:server
 server:
-	./llama.cpp/server \
+	./llama.cpp/llama-server \
+		-ngl 0 \
 		--threads 16 \
 		--threads-batch 16 \
 		--ctx-size 512 \
 		--batch-size 512 \
 		--host 0.0.0.0 \
-		--model models/llava/7b-1.6/ggml-model-q4_k.gguf \
-		--mmproj models/llava/7b-1.6/mmproj-model-f16.gguf \
+		--model models/bunny/bunny-text-model-f16.gguf \
+		--mmproj models/bunny/bunny-mmproj-f16.gguf \
 
 cli:
-	./llama.cpp/llava-cli \
+	./llama.cpp/llama-llava-cli \
 		--threads 16 \
 		--threads-batch 16 \
 		--ctx-size 512 \
@@ -62,9 +68,10 @@ cli:
 		--top-p 0.33 \
 		--min-p 0.05 \
 		--temp 0.1 \
-		--file prompt.txt \
+		--prompt "describe" \
 		-ngl 0 \
-		--model models/moondream2/moondream2-text-model-f16.gguf \
-		--mmproj models/moondream2/moondream2-mmproj-f16.gguf \
+		-ngld 0 \
+		--model models/bunny/bunny-text-model-f16.gguf \
+		--mmproj models/bunny/bunny-mmproj-f16.gguf \
 		--grammar-file ./grammar.gbnf \
-		--image images/m-2.jpeg
+		--image images/m-2.jpeg \
