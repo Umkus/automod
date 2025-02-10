@@ -129,6 +129,6 @@ If the model is not capable of detecting certain characteristic, try to split it
 
 Continue to improve the prompt until the model is able to detect all the characteristics correctly.
 
-After changing the prompt print an explanation of the changes made and why
+After each change of the prompt print an explanation of the changes made and why.
 
  */
