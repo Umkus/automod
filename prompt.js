@@ -74,7 +74,7 @@ Prompt should use wording that is clear and concise, and should be as short as p
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
 Evaluated properties:
-    - wether the photo is of a real life (candid, posed, group, subjects are who they are) or of a staged setup (movie, people playing somebody elses roles, actors, art, cartoon, etc)
+    - wether the photo is of a real life (candid, posed, group, subjects are who they are) or of a staged setup (movie, subjects playing somebody elses roles, actors, art, cartoon, etc)
     - wether the photo contains minors (underage people)
     - wether the photo contains privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
     - wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through clothing, complete lack of clothing, etc)
@@ -115,16 +115,16 @@ Expected values for images/simple.jpg: (a completely normal photo)
 Expected values for images/bus.jpg: (a girl that is suspected to be a minor, and taken from an angle that shows what appears to be barely noticeable nipple)
     staged setup: false
     miniors: true
-    privacy abuse: true
     intentional nudity: false
     unintentional nudity: true
 
 Produced values should match the expected values for the images provided in the task.
 
-If the model is not capable of detecting certain characteristic, try to split it logically into several easier to detect features.
+If the model consistently is not capable of detecting certain characteristic, try to split it logically into several easier to detect features.
 
 Continue to improve the prompt until the model is able to detect all the characteristics correctly.
 
-After each change of the prompt print an explanation of the changes made and why.
+After each change of the prompt write an explanation of the changes made and why to the prompt.log file.
 
+You can only change the prompt.txt file.
  */
