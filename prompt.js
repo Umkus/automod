@@ -128,6 +128,6 @@ Values should match the expected values for the images provided in the task.
 
 If the model is not capable of detecting certain characteristic, try to split it logically into other easier to detect features, that when both detected logically equal to the feature that we are looking for.
 
-After each run outline summarize the results and what changes should be made next if any.
+After each run summarize how did the model do and what changes should be made next and log this into prompt.log file.
 
  */
