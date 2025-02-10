@@ -130,4 +130,6 @@ If the model is not capable of detecting certain characteristic, try to split it
 
 After each prompt execution do a summary of how did the model do and what changes should be made next, and then log this into prompt.log file.
 
+Continue to improve the prompt until the model is able to detect all the characteristics correctly.
+
  */
