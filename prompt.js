@@ -23,10 +23,6 @@ async function getPromptResponse(image) {
             model: "minicpm-v-2_6",
             messages: [
                 {
-                    role: "system",
-                    content: "You are an expert at analyzing images for content moderation. You can recognize movie scenes, professional photography, and privacy violations with high accuracy. Always return clean JSON with no explanations."
-                },
-                {
                     role: "user",
                     content: [
                         {
