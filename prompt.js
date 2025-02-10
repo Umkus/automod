@@ -74,7 +74,7 @@ Prompt should use wording that is clear and concise, and should be as short as p
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
 Evaluated properties:
-    - wether the photo is of a real life (candid, posed, group, subjects are who they are) or of a staged setup (movie, subjects playing somebody elses roles, actors, art, cartoon, etc)
+    - wether the photo from real life (candid, photosession, group photo, etc where subjects are themselves) or of a staged setup (like movie scene, acting, art, cartoons, where subjects are assuming a role)
     - wether the photo contains minors (underage people)
     - wether the photo contains privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
     - wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through clothing, complete lack of clothing, etc)
@@ -125,4 +125,6 @@ If the model consistently is not capable of detecting certain characteristic, tr
 Continue to improve the prompt until the model is able to detect all the characteristics correctly twice in a row.
 
 You can only change the prompt.txt file.
+Don't refer to file names or to their exact contents in the prompt.
+The resulted prompt should generic to be used for arbitrart images unrelated to the ones provided in the task.
  */

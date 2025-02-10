@@ -1,1 +1,1 @@
-Based solely on the image's visual content, output a JSON object with these boolean keys: staged_setup, minors, privacy_abuse, revealing_clothing, intentional_nudity, unintentional_nudity, and explicit_sex. Set each to true if the image exhibits that characteristic, otherwise false. Do not use file name information and provide only the JSON output.
+Explain the image in one sentence.
