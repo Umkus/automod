@@ -82,21 +82,21 @@ Evaluated properties:
     - wether the photo contains incidental level of nudity that was not intended to be pictured (wardrobe malfunction, accidental exposure, upskirt, downblouse, etc)
     - wether the photo contains any explicit sexual act or content
 
-Expected values for images/shining.jpg: (a movie scene from "the shining")
+Expected values for images/shining.jpg:
     staged setup: true
     miniors: false
     privacy abuse: false
     revealing clothing: false
     intentional nudity: false
 
-Expected values for images/paparazzi.jpeg: (a photo of a celebrity, who is nude on a beach)
+Expected values for images/paparazzi.jpeg:
     staged setup: false
     miniors: false
     privacy abuse: true
     revealing clothing: true
     intentional nudity: true
 
-Expected values for images/ns.jpg: (an unexpected nipslip)
+Expected values for images/ns.jpg:
     staged setup: false
     miniors: false
     privacy abuse: true
@@ -104,7 +104,7 @@ Expected values for images/ns.jpg: (an unexpected nipslip)
     intentional nudity: false
     unintentional nudity: true
 
-Expected values for images/simple.jpg: (a completely normal photo)
+Expected values for images/simple.jpg:
     staged setup: false
     miniors: false
     privacy abuse: false
@@ -112,7 +112,7 @@ Expected values for images/simple.jpg: (a completely normal photo)
     intentional nudity: false
     unintentional nudity: false
 
-Expected values for images/bus.jpg: (a girl that is suspected to be a minor, and taken from an angle that shows what appears to be barely noticeable nipple)
+Expected values for images/bus.jpg:
     staged setup: false
     miniors: true
     intentional nudity: false
@@ -122,7 +122,7 @@ Produced values should match the expected values for the images provided in the 
 
 If the model consistently is not capable of detecting certain characteristic, try to split it logically into several easier to detect features.
 
-Continue to improve the prompt until the model is able to detect all the characteristics correctly.
+Continue to improve the prompt until the model is able to detect all the characteristics correctly twice in a row.
 
 After each change of the prompt write an explanation of the changes made and why to the prompt.log file.
 
