@@ -120,7 +120,6 @@ Expected values for images/bus.jpg: (a girl that is suspected to be a minor, and
     staged setup: false
     miniors: true
     privacy abuse: true
-    revealing clothing: true
     intentional nudity: false
     unintentional nudity: true
 
