@@ -124,7 +124,5 @@ If the model consistently is not capable of detecting certain characteristic, tr
 
 Continue to improve the prompt until the model is able to detect all the characteristics correctly twice in a row.
 
-After each change of the prompt write an explanation of the changes made and why to the prompt.log file.
-
 You can only change the prompt.txt file.
  */
