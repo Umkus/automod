@@ -123,13 +123,12 @@ Expected values for images/bus.jpg: (a girl that is suspected to be a minor, and
     intentional nudity: false
     unintentional nudity: true
 
-Resulted responses should return JSON object with the specified properties and boolean values for each property.
-Values should match the expected values for the images provided in the task.
+Produced values should match the expected values for the images provided in the task.
 
-If the model is not capable of detecting certain characteristic, try to split it logically into other easier to detect features, that when both detected logically equal to the feature that we are looking for.
-
-After each prompt execution do a summary of how did the model do and what changes should be made next, and then log this into prompt.log file.
+If the model is not capable of detecting certain characteristic, try to split it logically into several easier to detect features.
 
 Continue to improve the prompt until the model is able to detect all the characteristics correctly.
+
+After changing the prompt print an explanation of the changes made and why
 
  */
