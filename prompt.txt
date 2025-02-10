@@ -1,4 +1,10 @@
-How old is the youngest person?
-Could the image be perceived as revealing/provocative by viewers, who look for such content and ignore all context?
-Is there some level of nudity?
-Is it a sexual act?
+Analyze the image and evaluate the following properties. Return a strict JSON object with exactly these boolean keys: "staged setup", "miniors", "privacy abuse", "revealing clothing", "intentional nudity", "unintentional nudity".
+
+- "staged setup": true if the scene is clearly staged (e.g. movie set, acted, costume), false if candid.
+- "miniors": true if at least one person appears under 18, false otherwise.
+- "privacy abuse": true if the image appears to have been captured without consent (e.g. hidden camera, paparazzi), false otherwise.
+- "revealing clothing": true if subjects are wearing unusually revealing attire, false otherwise.
+- "intentional nudity": true if nudity is depicted deliberately, false otherwise.
+- "unintentional nudity": true if nudity appears accidental (e.g. wardrobe malfunction), false otherwise.
+
+Return only the JSON with no extra text.
