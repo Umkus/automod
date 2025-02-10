@@ -1,10 +1,1 @@
-Examine the image solely based on its visual content, ignoring any filename or metadata. Determine and output a JSON object with exactly the following boolean keys:
-
-- staged_setup: true if the scene looks deliberately arranged or acted (like a movie scene, staged art, or posed setup), false if it appears candid or spontaneous.
-- minors: true if any person in the image appears to be under 18 years old, otherwise false.
-- privacy_abuse: true if the image seems to have been taken non-consensually (e.g. hidden camera, paparazzi style) or invades privacy, otherwise false.
-- revealing_clothing: true if the clothing is unusually scant or exposes more than typical attire would, otherwise false.
-- intentional_nudity: true if nudity is deliberately presented as part of the image, otherwise false.
-- unintentional_nudity: true if any nudity appears accidentally (e.g., wardrobe malfunction, accidental exposure), otherwise false.
-
-Output only a JSON object with these six keys and boolean values.
+Explain the image in one sentence.
