@@ -20,7 +20,7 @@ async function getPromptResponse(image) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            model: "local-model",
+            model: "minicpm-v-2_6",
             messages: [
                 {
                     role: "system",
@@ -73,8 +73,7 @@ Run the prompt and check the response.
 Only base the prompt on the image contents, not the filename.
 Don't do hacks or shortcuts to reach your goal.
 If the response is not as expected, improve the prompt and try again until it is.
-Prompt must use wording that is clear and concise, and must be as short as possible, choose most specific words and coined terms that most accurately describe exact properties or actions that are being evaluated.
-Prompt must be understandable by a 7B model.
+Prompt should use wording that is clear and concise, and should be as short as possible, choose most specific words and coined terms that most accurately describe exact properties or actions that are being evaluated.
 
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
@@ -128,11 +127,8 @@ Expected values for images/bus.jpg: (a girl that is suspected to be a minor, and
 Resulted responses should return JSON object with the specified properties and boolean values for each property.
 Values should match the expected values for the images provided in the task.
 
-Don't ask wether to continue or not, just run the commands until you are stopped.
-
 If the model is not capable of detecting certain characteristic, try to split it logically into other easier to detect features, that when both detected logically equal to the feature that we are looking for.
 
-Only make very targeted, smallest needed changes to the prompt, to avoid changing the model's behavior too much.
-Target a single specific feature, make a change to affect that single feature and check the response.
+After each run outline summarize the results and what changes should be made next if any.
 
  */
