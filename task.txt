@@ -1,0 +1,78 @@
+
+
+Talk to 2 models, both running on LM Studio locally behind http://192.168.178.96:1234/v1/chat/completions
+
+The models are minicpm-v-2_6 (vision) and meta-llama-3.1-8b-instruct (text).
+
+You will moderate a communication between the two to come up with a perfect vision model prompt, which detects certain characteristics of images, for moderation purposes.
+
+You should start a communication with a text model by explaining the task, what will be happening, what is the initial prompt and what are the expectations.
+
+You should then prompt the vision model for every test image using the initial detection prompt.
+You should then take the responses of the vision model requests and send all of them to the text model so that it would evaluate the results.
+You should ask the text model to evaluate the results and tweak the prompt to try and improve the detection results.
+
+You would then take the new updated prompt and perform the requests with the test images to the vision model, collect respones and submit them to the thext model for review again.
+
+The process should continue until the text model detects that the vision model responses are as expected and it detected all features correctly.
+The text model should have the overview of all prompts and results produced from those to be able to progress.
+
+Characteristics to be detected by vision model:
+    - 1: wether the photo depicts real-life characters and setting (who they really are) not a staged role-play setting (movie, acting, art etc)
+    - 2: wether the photo contains minors (underage people)
+    - 3: wether the photo captures the process of nonconcensual privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
+    - 4: wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through, complete lack of clothing, etc)
+    - 5: wether the photo contains intentialy nudity (private parts, genitals, any other intimate parts, that are being shown off intentionally, etc)
+    - 6: wether the photo contains nudity that was not intended to be captured (wardrobe malfunction, accidental exposure, upskirt, downblouse, etc)
+    - 7: wether the photo depicts an explicit sexual act
+
+You should show text model these exact characeristics as they are defined, to be processed by it and iterated further as it sees fit. This is important.
+
+You should also initially tell text model about the expected image characteristics that are knonw and expected to be detected: 
+
+images/shining.jpg:
+    1: true
+    2: false
+    3: false
+    4: false
+    5: false
+    6: false
+    7: false
+
+images/paparazzi.webp:
+    1: false
+    2: false
+    3: true
+    4: true
+    5: true
+    6: true
+    7: false
+
+images/ns.jpg:
+    1: false
+    2: false
+    3: true
+    4: true
+    5: false
+    6: true
+    7: false
+
+images/simple.jpg:
+    1: false
+    2: false
+    3: false
+    4: false
+    5: false
+    6: false
+    7: false
+
+images/bus.jpg:
+    1: false
+    2: true
+    3: true
+    4: true
+    5: false
+    6: true
+    7: false
+
+
