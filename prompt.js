@@ -74,7 +74,7 @@ Prompt should use wording that is clear and concise, and should be as short as p
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
 Characteristics to be detected by vision model:
-    - 1: wether the photo depicts real-life characters and setting (who they really are) not a staged role-play setting (movie, acting, art etc)
+    - 1: wether the photo depicts a staged role-play setting (movie, acting, art etc)
     - 2: wether the photo contains minors (underage people)
     - 3: wether the photo captures the process of nonconcensual privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
     - 4: wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through, complete lack of clothing, etc)
