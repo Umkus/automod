@@ -127,4 +127,8 @@ images/bus.jpg:
     6: true
     7: false
 
+Continue refining the prompt until the response is as expected twice in a row.
+Don't stop until you are confident that the prompt is good and detects all characteristics as expected .
+If the model allows, try to formulate the prompt so that it returns a structured output, to be machine readable.
+Initial prompt is there for you to get started, but you should change it to be more specific and accurate.
  */
