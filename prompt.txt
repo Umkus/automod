@@ -2,7 +2,7 @@ Analyze the photograph solely on its visual content. Do not use the filename, me
 
 For each of the following seven attributes, answer with true or false based solely on what you visually observe:
 
-1. real_life: true if the image shows a natural, candid scene where subjects appear relaxed and engaged in their environment with ample visible context (i.e. at least 50% of the image shows background or setting); set to false if the image shows signs of covert or intrusive capture, such as when a subject occupies more than 50% of the frame, the image is aggressively cropped or zoomed in, or the angle is unconventional in a way that suggests non-consensual capture.
+1. role_play: true ifphoto depicts role-play setting (movie scene, acting, art etc)
 2. minors: true if any individual appears to be under 18 based solely on visual features; false otherwise.
 3. privacy_abuse: true if there is clear evidence of non-consensual or intrusive capture (for example, hidden camera angles, invasive close-ups that remove visible context, abrupt or severe cropping, or any framing that implies unauthorized or covert observation); false otherwise.
 4. revealing_attire: true if subjects are dressed in clothing that is notably revealing (for instance, transparent, extremely skimpy, or provocative compared to standard attire); false otherwise.

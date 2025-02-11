@@ -8,7 +8,7 @@ Prompt should use wording that is clear and concise, and should be as short as p
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
 Characteristics to be detected by vision model:
-    - 1: wether the photo depicts real-life characters and setting (who they really are) not a staged role-play setting (movie, acting, art etc)
+    - 1: wether the photo depicts role-play setting (movie scene, acting, art etc)
     - 2: wether the photo contains minors (underage people)
     - 3: wether the photo captures the process of nonconcensual privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
     - 4: wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through, complete lack of clothing, etc)
@@ -61,7 +61,7 @@ images/bus.jpg:
     6: true
     7: false
 
-Continue refining the prompt until the response is as expected twice in a row.
+Continue refining the prompt until the detected characteristics match expected values.
 Don't stop until you are confident that the prompt is good and detects all characteristics as expected.
 Formulate the prompt so that it returns a structured output, to be machine readable.
 Initial prompt is there for you to get started, but you should change it to be more specific and accurate.
