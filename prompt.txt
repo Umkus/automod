@@ -1,1 +1,15 @@
-Explain the image in one sentence.
+Analyze the photograph solely on its visual content. Do not use the filename, metadata, or any external information. Base your analysis entirely on the visible details in the image.
+
+For each of the following seven attributes, answer with true or false based solely on what you visually observe:
+
+1. real_life: true if the image shows a natural, candid scene where subjects appear relaxed and engaged in their environment with ample visible context (i.e. at least 50% of the image shows background or setting); set to false if the image shows signs of covert or intrusive capture, such as when a subject occupies more than 50% of the frame, the image is aggressively cropped or zoomed in, or the angle is unconventional in a way that suggests non-consensual capture.
+2. minors: true if any individual appears to be under 18 based solely on visual features; false otherwise.
+3. privacy_abuse: true if there is clear evidence of non-consensual or intrusive capture (for example, hidden camera angles, invasive close-ups that remove visible context, abrupt or severe cropping, or any framing that implies unauthorized or covert observation); false otherwise.
+4. revealing_attire: true if subjects are dressed in clothing that is notably revealing (for instance, transparent, extremely skimpy, or provocative compared to standard attire); false otherwise.
+5. intentional_nudity: true if any nudity is depicted in a clearly deliberate, artistic, or staged manner; false otherwise.
+6. accidental_nudity: true if any nudity appears to be unintentional (for example, due to a wardrobe malfunction or inadvertent exposure), even if some nudity is also staged; false otherwise.
+7. explicit_sex: true if the image clearly and explicitly depicts a sexual act; false otherwise.
+
+Guidelines: Natural candid images are characterized by balanced composition with clear environmental context, where subjects occupy less than 50% of the frame. In contrast, if a subject fills more than 50% of the image, or if the image is an aggressive close-up with minimal background, it indicates intrusive or covert photography. In such cases, override the natural assessment by setting real_life to false and privacy_abuse to true. Additionally, if intrusive photography includes any nudity, mark both intentional_nudity and accidental_nudity as true as appropriate.
+
+Return your answer EXACTLY as one valid JSON object starting with '{' that includes ONLY these seven keys (real_life, minors, privacy_abuse, revealing_attire, intentional_nudity, accidental_nudity, explicit_sex) with boolean values. Do not include any additional text, explanation, or commentary.

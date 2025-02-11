@@ -1,21 +1,11 @@
+Ensure that the prompt is efficient and produces expected results.
+Run the prompt and check the response.
+Only base the prompt on the image contents, not the filename.
+Don't do hacks or shortcuts to reach your goal.
+If the response is not as expected, improve the prompt and try again until it is.
+Prompt should use wording that is clear and concise, and should be as short as possible, choose most specific words and coined terms that most accurately describe exact properties or actions that are being evaluated.
 
-
-Talk to 2 models, both running on LM Studio locally behind http://192.168.178.96:1234/v1/chat/completions
-
-The models are minicpm-v-2_6 (vision) and meta-llama-3.1-8b-instruct (text).
-
-You will moderate a communication between the two to come up with a perfect vision model prompt, which detects certain characteristics of images, for moderation purposes.
-
-You should start a communication with a text model by explaining the task, what will be happening, what is the initial prompt and what are the expectations.
-
-You should then prompt the vision model for every test image using the initial detection prompt.
-You should then take the responses of the vision model requests and send all of them to the text model so that it would evaluate the results.
-You should ask the text model to evaluate the results and tweak the prompt to try and improve the detection results.
-
-You would then take the new updated prompt and perform the requests with the test images to the vision model, collect respones and submit them to the thext model for review again.
-
-The process should continue until the text model detects that the vision model responses are as expected and it detected all features correctly.
-The text model should have the overview of all prompts and results produced from those to be able to progress.
+You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
 Characteristics to be detected by vision model:
     - 1: wether the photo depicts real-life characters and setting (who they really are) not a staged role-play setting (movie, acting, art etc)
@@ -25,10 +15,6 @@ Characteristics to be detected by vision model:
     - 5: wether the photo contains intentialy nudity (private parts, genitals, any other intimate parts, that are being shown off intentionally, etc)
     - 6: wether the photo contains nudity that was not intended to be captured (wardrobe malfunction, accidental exposure, upskirt, downblouse, etc)
     - 7: wether the photo depicts an explicit sexual act
-
-You should show text model these exact characeristics as they are defined, to be processed by it and iterated further as it sees fit. This is important.
-
-You should also initially tell text model about the expected image characteristics that are knonw and expected to be detected: 
 
 images/shining.jpg:
     1: true
@@ -75,4 +61,9 @@ images/bus.jpg:
     6: true
     7: false
 
-
+Continue refining the prompt until the response is as expected twice in a row.
+Don't stop until you are confident that the prompt is good and detects all characteristics as expected.
+Formulate the prompt so that it returns a structured output, to be machine readable.
+Initial prompt is there for you to get started, but you should change it to be more specific and accurate.
+Run prompt.js to check if the prompt is good.
+Extremely important: You will not stop unless the detected values match exactly!
