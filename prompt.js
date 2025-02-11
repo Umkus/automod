@@ -73,58 +73,58 @@ Prompt should use wording that is clear and concise, and should be as short as p
 
 You can prompt the model with a prompt of your choosing to get specific knowledge about certain details of the image, which might be relevant to come up with a better prompt.
 
-Evaluated properties:
-    - wether the photo from real life (candid, photosession, group photo, etc where subjects are themselves) or of a staged setup (like movie scene, acting, art, cartoons, where subjects are assuming a role)
-    - wether the photo contains minors (underage people)
-    - wether the photo contains privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
-    - wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through clothing, complete lack of clothing, etc)
-    - wether the photo contains intentialy nudity (private parts, genitals, any other intimate parts, that are being shown off intentionally, etc)
-    - wether the photo contains incidental level of nudity that was not intended to be pictured (wardrobe malfunction, accidental exposure, upskirt, downblouse, etc)
-    - wether the photo contains any explicit sexual act or content
+Characteristics to be detected by vision model:
+    - 1: wether the photo depicts real-life characters and setting (who they really are) not a staged role-play setting (movie, acting, art etc)
+    - 2: wether the photo contains minors (underage people)
+    - 3: wether the photo captures the process of nonconcensual privacy abuse (nonconcensual capture, hidden cam, paparazzi shot, voyeur vibes, etc)
+    - 4: wether the photo contains attire that reveals a bit more (or much more) than it probably should (transparent, bikini, lingerie, underwear, private parts showing through, complete lack of clothing, etc)
+    - 5: wether the photo contains intentialy nudity (private parts, genitals, any other intimate parts, that are being shown off intentionally, etc)
+    - 6: wether the photo contains nudity that was not intended to be captured (wardrobe malfunction, accidental exposure, upskirt, downblouse, etc)
+    - 7: wether the photo depicts an explicit sexual act
 
-Expected values for images/shining.jpg:
-    staged setup: true
-    miniors: false
-    privacy abuse: false
-    revealing clothing: false
-    intentional nudity: false
+images/shining.jpg:
+    1: true
+    2: false
+    3: false
+    4: false
+    5: false
+    6: false
+    7: false
 
-Expected values for images/paparazzi.jpeg:
-    staged setup: false
-    miniors: false
-    privacy abuse: true
-    revealing clothing: true
-    intentional nudity: true
+images/paparazzi.webp:
+    1: false
+    2: false
+    3: true
+    4: true
+    5: true
+    6: true
+    7: false
 
-Expected values for images/ns.jpg:
-    staged setup: false
-    miniors: false
-    privacy abuse: true
-    revealing clothing: true
-    intentional nudity: false
-    unintentional nudity: true
+images/ns.jpg:
+    1: false
+    2: false
+    3: true
+    4: true
+    5: false
+    6: true
+    7: false
 
-Expected values for images/simple.jpg:
-    staged setup: false
-    miniors: false
-    privacy abuse: false
-    revealing clothing: false
-    intentional nudity: false
-    unintentional nudity: false
+images/simple.jpg:
+    1: false
+    2: false
+    3: false
+    4: false
+    5: false
+    6: false
+    7: false
 
-Expected values for images/bus.jpg:
-    staged setup: false
-    miniors: true
-    intentional nudity: false
-    unintentional nudity: true
+images/bus.jpg:
+    1: false
+    2: true
+    3: true
+    4: true
+    5: false
+    6: true
+    7: false
 
-Produced values should match the expected values for the images provided in the task.
-
-If the model consistently is not capable of detecting certain characteristic, try to split it logically into several easier to detect features.
-
-Continue to improve the prompt until the model is able to detect all the characteristics correctly twice in a row.
-
-You can only change the prompt.txt file.
-Don't refer to file names or to their exact contents in the prompt.
-The resulted prompt should be generic to be used for arbitrary images unrelated to the ones provided in the task.
  */
